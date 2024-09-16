@@ -1,0 +1,32 @@
+<div class="container mt-5">
+  <h2>Update Employee Information</h2>
+  <form [formGroup]="employeeForm" (ngSubmit)="onUpdate()">
+    <div>
+      <label for="name">Name</label>
+      <input id="name" formControlName="name" type="text"/>
+    </div>
+
+    <div>
+      <label for="email">Email</label>
+      <input id="email" formControlName="email" type="email"/>
+    </div>
+
+    <div>
+      <label for="mobileNumber">Mobile Number</label>
+      <input id="mobileNumber" formControlName="mobileNumber" type="text"/>
+    </div>
+
+    <div>
+      <label for="homeAddress">Home Address</label>
+      <input id="homeAddress" formControlName="homeAddress" type="text"/>
+    </div>
+
+    <div>
+      <label for="photo">Photo</label>
+      <input id="photo" type="file" (change)="onFileSelected($event)"/>
+    </div>
+
+    <button type="submit" class="btn btn-primary" [disabled]="employeeForm.invalid">Update</button>
+  </form>
+
+</div>

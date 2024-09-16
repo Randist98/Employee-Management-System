@@ -1,0 +1,32 @@
+<div class="container mt-5">
+  <h2>Add New Employee</h2>
+  <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="name">Name</label>
+      <input id="name" formControlName="name" type="text" required />
+    </div>
+
+    <div>
+      <label for="email">Email</label>
+      <input id="email" formControlName="email" type="email" required />
+    </div>
+
+    <div>
+      <label for="mobileNumber">Mobile Number</label>
+      <input id="mobileNumber" formControlName="mobileNumber" type="text" required />
+    </div>
+
+    <div>
+      <label for="homeAddress">Home Address</label>
+      <input id="homeAddress" formControlName="homeAddress" type="text" required />
+    </div>
+
+    <div>
+      <label for="photo">Photo</label>
+      <input id="photo" type="file" (change)="onFileSelected($event)" required />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Add Employee</button>
+  </form>
+
+</div>
